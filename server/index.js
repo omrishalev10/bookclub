@@ -12,11 +12,11 @@ const PORT = 3452;
 
 // CORS options
 const corsOptions = {
-  origin: 'https://webprojmainclient.vercel.app', // The origin of the frontend application
+  origin: 'https://bookclubclient.vercel.app', // The origin of the frontend application
   credentials: true, // Allows cookies to be sent
   methods: ["GET", "POST", "PUT", "DELETE"]
 };
-webprojmainserver
+
 app.use(cookieParser());
 
 // Apply CORS before other routes

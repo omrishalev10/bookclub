@@ -51,7 +51,7 @@ const Profile = ({ isDarkMode }) => {
   const handleSaveSubjects = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('https://webprojmainserver.vercel.app/api/update-favorite-subjects', {
+      const response = await fetch('https://bookclubserver.vercel.app/api/update-favorite-subjects', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ subjects: favoriteSubjects }),
@@ -76,7 +76,7 @@ const Profile = ({ isDarkMode }) => {
     e.preventDefault();
     try {
         
-        const response = await fetch(`https://webprojmainserver.vercel.app/api/remove-favorite-book/${bookId}`, {
+        const response = await fetch(`https://bookclubserver.vercel.app/api/remove-favorite-book/${bookId}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId: auth._id }),

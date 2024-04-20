@@ -40,7 +40,7 @@
 
     const fetchBooksAndStoreData = async (subject) => {
       try {
-        const response = await fetch(`https://webprojmainserver.vercel.app/api/books?subject=${subject}`);
+        const response = await fetch(`https://bookclubserver.vercel.app/api/books?subject=${subject}`);
         if (!response.ok) {
           throw new Error('Failed to fetch');
         }
@@ -61,7 +61,7 @@
       }
 
       try {
-        const response = await fetch(`https://webprojmainserver.vercel.app/api/search-books?query=${trimmedQuery}`);
+        const response = await fetch(`https://bookclubserver.vercel.app/api/search-books?query=${trimmedQuery}`);
         if (!response.ok) {
           throw new Error('Failed to search');
         }
@@ -98,7 +98,7 @@
 
       console.log(`Adding book ${bookId} to favorites for user ${auth._id}`);
       try {
-        const response = await fetch('https://webprojmainserver.vercel.app/api/update-favorite-books', {
+        const response = await fetch('https://bookclubserver.vercel.app/api/update-favorite-books', {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

@@ -7,7 +7,7 @@ const Comments = ({ bookId, isDarkMode }) => {
   // Function to fetch comments
   const fetchComments = async () => {
     try {
-      const response = await fetch(`https://webprojmainserver.vercel.app/api/books/${bookId}/comments`);
+      const response = await fetch(`https://bookclubserver.vercel.app/api/books/${bookId}/comments`);
       if (!response.ok) {
         throw new Error('Failed to fetch comments');
       }

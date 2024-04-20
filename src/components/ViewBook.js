@@ -13,7 +13,7 @@ const ViewBook = ({isDarkMode}) => {
     const fetchBook = async () => {
       try {
         console.log(id);
-        const response = await fetch(`https://webprojmainserver.vercel.app/api/books/${id}`);
+        const response = await fetch(`https://bookclubserver.vercel.app/api/books/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch book');
         }
@@ -36,7 +36,7 @@ const ViewBook = ({isDarkMode}) => {
         console.error('Comment text and author name are required');
         return;
       }
-      const response = await fetch(`https://webprojmainserver.vercel.app/api/books/${id}/comments`, {
+      const response = await fetch(`https://bookclubserver.vercel.app/api/books/${id}/comments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

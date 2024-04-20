@@ -8,7 +8,7 @@
     const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
     const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
     const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const REGISTER_URL = 'https://webprojmainserver.vercel.app/api/register';
+    const REGISTER_URL = 'https://bookclubserver.vercel.app/api/register';
 
     const Register = ({ isDarkMode }) => {
         const { setAuth } = useContext(AuthContext); // Placeholder for context use

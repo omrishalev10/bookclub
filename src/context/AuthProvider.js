@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
 
     const checkLoginStatus = async () => {
         try {
-            const response = await fetch('https://webprojmainserver.vercel.app/api/verify', {
+            const response = await fetch('https://bookclubserver.vercel.app/api/verify', {
                 method: 'GET',
                 credentials: 'include' 
             });
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = async () => {
         try {
-            const response = await fetch('https://webprojmainserver.vercel.app/api/logout', {
+            const response = await fetch('https://bookclubserver.vercel.app/api/logout', {
                 method: 'POST',
                 credentials: 'include'
             });
